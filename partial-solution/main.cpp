@@ -13,7 +13,9 @@
 #include "constants.h"
 #include "neighborhood.h"
 #include "shape.h"
-
+#include "buffer.h"
+#include <iostream>
+using std::cin;
 // ----------------------------------------------------------------------------
 // test functions
 
@@ -23,7 +25,6 @@
  */
 void test_buffer() {
     Buffer b(TERM_SIZE_X, TERM_SIZE_Y);
-
     // draw ellipse
     for (int y=0; y < b.size_y; y++)
         for (int x=0; x < b.size_x; x++)
@@ -73,21 +74,21 @@ void test_shape() {
  * - Comment out the parts you aren't currently using.
  */
 int main() {
-//     test_buffer();
+	 int test;
+     //test_buffer();
+    // ------------------------------------------------------------------------
+
+     //test_shape();
 
     // ------------------------------------------------------------------------
 
-//     test_shape();
-
-    // ------------------------------------------------------------------------
-
-    // animate  neighborhood
+    //animate  neighborhood
     unsigned int size_x = TERM_SIZE_X/Shape::size_x;
     unsigned int size_y = TERM_SIZE_Y/Shape::size_y;
     Neighborhood(size_x, size_y).animate(1000);
 
     // ------------------------------------------------------------------------
-
+	 cin >> test;
     return 0;  // success
 }
 

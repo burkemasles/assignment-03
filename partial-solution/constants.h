@@ -25,7 +25,7 @@
  */
 namespace {
 
-    const unsigned int TERM_SIZE_X = 80;
+    const unsigned int TERM_SIZE_X = 120;
     /**
      * The width of the terminal window, in characters.
      */
